@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD with CSS and HTML</title>
+    <link rel="stylesheet" href="./css/crud.css">
+</head>
+<body onload="readAll()">
+    <h1>Learning CRUD</h1>
+    <div class="container">
+        <div class="form_container">
+            <!-- Create Form -->
+            <form class="create_form">
+                <input type="text" class="name" placeholder="Enter Name" name="name" />
+                <input type="text" class="email" placeholder="Enter Email"  name="email"/>
+                <button type="button" onclick="add()">Create</button>
+            </form>
+            
+            <!-- Update Form -->
+            <form class="update_form" name="update_form">
+                <input type="text" class="update_id" name="update_id">
+                <input type="text" class="uname" placeholder="Enter Name"  name="uname"/>
+                <input type="text" class="uemail" placeholder="Enter Email" name="uemail" />
+                <button type="button" onclick="update()">Update</button>
+            </form>
+            
+            <!-- Add Button -->
+             <div class="add_div">
+                 <button class="addbtn" onclick="createForm()">Add +</button>
+                </div>
+
+            <br />
+            
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                    
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                     
+                </thead>
+                <tbody class="table_data"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./js/crud.js"></script>
+</body>
+</html>
